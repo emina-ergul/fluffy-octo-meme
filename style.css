@@ -57,15 +57,16 @@ button {
 
 }
 .no {
-    left: 10px
+    left: 10px;
+    transition: 0s
 }
 
 .no:hover {
-    visibility: hidden
+    opacity: 0;
 }
-.no:active {
+/* .no:active {
     visibility: hidden
-}
+} */
 
 .yes:hover {
     cursor: pointer;
