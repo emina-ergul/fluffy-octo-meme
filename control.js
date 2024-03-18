@@ -1,4 +1,6 @@
 const yesButton = document.getElementById("yes");
+const noButton = document.querySelector(".no");
+const fire = document.querySelector(".fire");
 const container = document.querySelector(".container");
 let isShooting = true;
 document.documentElement.scrollTop
@@ -50,9 +52,9 @@ function shootStars() {
         let duration = Math.floor(Math.random() * 1 + 2);
         let delay = Math.random() * 3;
         let width = Math.floor(Math.random() * 150)
-        if(width < 30) {
-            let width = 50
-        }
+        // if(width < 30) {
+        //     let width = 100
+        // }
         let randomCol = col[Math.floor(Math.random() * col.length)];
         
         shootingStar.style.animationDuration = duration + "s";
@@ -72,3 +74,12 @@ function shootStars() {
         document.body.removeChild(shootingStarsContainer);
     }, 5000); 
 }
+
+noButton.addEventListener("click", function() {
+    noButton.style.opacity = 0;
+    fire.style.visibility = "visible";
+
+    setTimeout(function() {
+        fire.style.visibility = "hidden";
+    }, 4000);
+});

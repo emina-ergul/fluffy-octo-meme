@@ -35,13 +35,16 @@ body{
 .hidden {
     opacity: 0; 
   }
+.visible {
+    opacity: 1; 
+  }
 
 .buttons {
     display: flex;
     justify-content: space-between;
     color: #000;
     margin: 20px 0 0 0;
-
+    position: relative;
 }
 
 button {
@@ -52,26 +55,28 @@ button {
     border-radius: 4px;
 }
 
+.fire {
+    position: absolute;
+    height: 60px;
+    width: 68px;
+    left: 116px;
+    bottom:10px;
+    z-index: 10;
+    visibility: hidden;
+}
+
 .yes {
     left:30px;
 
 }
 .no {
     left: 10px;
-    transition: 0s
+    transition: 3s;
 }
 
-.no:hover {
-    opacity: 0;
-}
-/* .no:active {
-    visibility: hidden
-} */
-
-.yes:hover {
+.yes:hover .no:hover {
     cursor: pointer;
 }
-
 
 i {
     position: absolute;
